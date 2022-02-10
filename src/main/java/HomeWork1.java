@@ -1,3 +1,9 @@
+/**
+ * Java 1. HomeWork #1
+ *
+ * @author KirillGolan
+ * @version 7.02.22.
+ */
 public class HomeWork1 {
     public static void main(String[] args) {
         printThreeWords();
