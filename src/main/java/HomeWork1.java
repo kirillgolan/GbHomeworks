@@ -6,49 +6,33 @@ public class HomeWork1 {
         compareNumbers();
 
     }
-    public static void printThreeWords() {
+
+    static void printThreeWords() {
         System.out.println("Orange");
         System.out.println("Banana");
         System.out.println("Apple");
     }
 
-    public static void checkSumSign() {
-        int a = 2;
-        int b = -10;
-        int c = a + b;
-        if ( c >= 0 ) {
-            System.out.println("Sum is positive");
-        }
-        else {
-            System.out.println("Sum is negative");
-        }
+    static void checkSumSign() {
+        int a = 2, b = -10;
+            System.out.println(a + b >= 0? "Sum is positive" : "Sum is negative");
     }
 
-    public static void printColor() {
+    static void printColor() {
         int value = 1000;
-        if (value < 0) {
+        if (value <= 0) {
             System.out.println("RED");
         }
         if (value > 0 && value <= 100) {
             System.out.println("YELLOW");
         }
-        if (value > 100) {
+        else {
             System.out.println("GREEN");
         }
     }
 
-    public static void compareNumbers() {
-        int a = 400;
-        int b = 4;
-        if (a >= b) {
-            System.out.println("a>=b");
-        }
-        else {
-            System.out.println("a<b");
-        }
-
+    static void compareNumbers() {
+        int a = 400, b = 4;
+            System.out.println(a >= b? "a>=b" : "a<b");
     }
-
-
-
 }
