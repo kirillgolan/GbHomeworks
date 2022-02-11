@@ -10,12 +10,11 @@ public class HomeWork2 {
        // результат, как я понял можно не выводить, но для наглядности выведу.
         System.out.println(result);
         positiveOrNegative( -10);
-        boolean result1 = positiveOrNot(10);
+        boolean result1 = positiveOrNot(-3);
         System.out.println(result1);
-        printNumberString();
+        printNumberString("Wery important string", 3);
         boolean result2 = leapYear(2012);
         System.out.println(result2);
-
     }
 
     static boolean within10and20(int a , int b) {
@@ -30,9 +29,9 @@ public class HomeWork2 {
         return  (value1 < 0);
     }
 
-    static void printNumberString() {
-        for (int i = 1; i <= 7; i++) {
-            System.out.println("Wery important string");
+    static void printNumberString(String str1, int a ) {
+        for (int i = 0 ; i <= a; i++) {
+            System.out.println(str1);
         }
     }
 
