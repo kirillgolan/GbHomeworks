@@ -30,7 +30,7 @@ public class HomeWork2 {
     }
 
     static void printNumberString(String str1, int a ) {
-        for (int i = 0 ; i <= a; i++) {
+        for (int i = 0 ; i < a; i++) {
             System.out.println(str1);
         }
     }
