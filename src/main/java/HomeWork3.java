@@ -24,19 +24,20 @@ public class HomeWork3 {
         int[] arr = {0, 1, 1, 1, 0, 1, 0};
         System.out.println(Arrays.toString(arr));
         for (int i = 0; i < arr.length; i++) {
-            if (arr[i] == 0) {
-                arr[i] = 1;
-            } else {
-                arr[i] = 0;
-            }
-            System.out.print(arr[i] + " ");
+            //if (arr[i] == 0) {
+            //    arr[i] = 1;
+            //} else {
+             //   arr[i] = 0;
+            //}
+            arr[i] = arr[i] == 0 ? 1 : 0;
+            //System.out.print(arr[i] + " ");
             //Так и не понял как вывести изменённые значения с помощью метода toString, буду рад если подскажите
-            // System.out.println(Arrays.toString(arr[i]));
+            //System.out.println(Arrays.toString(arr[i]));
         }
     }
 
     static void borderMethod() {
-        System.out.println("\n");
+        System.out.println("\n -----------------");
     }
 
     static void fillArray() {
