@@ -29,7 +29,7 @@ public class HomeWork3 {
             //} else {
              //   arr[i] = 0;
             //}
-            arr[i] = arr[i] == 0 ? 1 : 0;
+            arr[i] = (arr[i] == 0) ? 1 : 0;
             System.out.print(arr[i] + " ");
             //Так и не понял как вывести изменённые значения с помощью метода toString, буду рад если подскажите
             //System.out.println(Arrays.toString(arr[i]));
@@ -51,9 +51,10 @@ public class HomeWork3 {
     static void lessSixX2() {
         int[] arr = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
         for (int l = 0; l < arr.length; l++) {
-            if (arr[l] < 6) {
-                arr[l] = arr[l] * 2;
-            }
+            //if (arr[l] < 6) {
+            //    arr[l] = arr[l] * 2;
+            //}
+            arr[l] = (arr[l] < 6) ? (arr[l] * 2) : arr[l];
             System.out.print(arr[l] + " ");
         }
     }
