@@ -31,7 +31,6 @@ public class HomeWork3 {
             //}
             arr[i] = (arr[i] == 0) ? 1 : 0;
             System.out.print(arr[i] + " ");
-            //Так и не понял как вывести изменённые значения с помощью метода toString, буду рад если подскажите
             //System.out.println(Arrays.toString(arr[i]));
         }
     }
@@ -78,12 +77,13 @@ public class HomeWork3 {
         }
     }
 
-    static void returnArray(int len, int initialValue) {
+    static int[] returnArray(int len, int initialValue) {
         int[] arr = new int[len];
         for (int i = 0; i < len; i++) {
             arr[i] = initialValue;
-            System.out.print(arr[i] + " ");
+        //    System.out.print(arr[i] + " ");
         }
+        return arr;
     }
 
     static void minMaxArray() {
