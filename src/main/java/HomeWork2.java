@@ -13,7 +13,7 @@
         boolean result1 = negativeOrNot(-3);
         System.out.println(result1);
         printNumberString("Wery important string", 3);
-        boolean result2 = leapYear(2012);
+        boolean result2 = leapYear(2022);
         System.out.println(result2);
     }
 
