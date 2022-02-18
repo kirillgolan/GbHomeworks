@@ -94,6 +94,7 @@ class TicTacToe {
     }
 
     boolean chekWin(char ch) {
+        //диагональные линии
         if (table[0][0] == ch && table[1][1] == ch &&table[2][2] == ch ) return  true;
         if (table[2][0] == ch && table[1][1] == ch &&table[0][2] == ch ) return  true;
         //горизонтальные линии
