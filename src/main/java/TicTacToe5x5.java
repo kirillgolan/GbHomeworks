@@ -3,7 +3,6 @@
  *
  * @author KirillGolan
  * @version 18.02.22.
- * work in progress
  */
 import java.util.Random;
 import java.util.Scanner;
@@ -97,16 +96,19 @@ class TicTacToe5x5 {
 
     boolean chekWin(char ch) {
         //диагональные линии
-        if ((table[0][0] == ch && table[1][1] == ch && table[2][2] == ch && table[3][3] == ch) || (table[4][4] == ch && table[1][1] == ch && table[2][2] == ch && table[3][3] == ch))  return  true;
-        if ((table[0][1] == ch && table[1][2] == ch && table[2][3] == ch && table[3][4] == ch) || (table[4][3] == ch && table[1][0] == ch && table[2][1] == ch && table[3][2] == ch))  return  true;
+        if ((table[0][0] == ch && table[1][1] == ch && table[2][2] == ch && table[3][3] == ch) || (table[4][4] == ch && table[1][1] == ch && table[2][2] == ch && table[3][3] == ch))  return true;
+        if ((table[0][1] == ch && table[1][2] == ch && table[2][3] == ch && table[3][4] == ch) || (table[4][3] == ch && table[1][0] == ch && table[2][1] == ch && table[3][2] == ch))  return true;
 
-        if (table[2][0] == ch && table[1][1] == ch && table[0][2] == ch ) return  true;
+        if ((table[4][0] == ch && table[3][1] == ch && table[2][2] == ch && table[1][3] == ch) || (table[0][4] == ch && table[3][1] == ch && table[2][2] == ch && table[1][3] == ch)) return true;
+        if ((table[3][0] == ch && table[2][1] == ch && table[1][2] == ch && table[0][3] == ch) || (table[4][1] == ch && table[3][2] == ch && table[2][3] == ch && table[1][4] == ch)) return true;
+
         //горизонтальные линии
         for (int i = 0; i < table.length; i++) {
             if ((table[i][0] == ch && table[i][1] == ch && table[i][2] == ch && table[i][3] == ch) || (table[i][4] == ch && table[i][1] == ch && table[i][2] == ch && table[i][3] == ch)) {
                 return true;
             }
         }
+
         //вертикальные линии
         for (int i = 0; i < table.length; i++) {
             if ((table[0][i] == ch && table[1][i] == ch && table[2][i] == ch && table[3][i] == ch) || (table[4][i] == ch && table[1][i] == ch && table[2][i] == ch && table[3][i] == ch)) {
