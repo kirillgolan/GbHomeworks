@@ -7,19 +7,19 @@
 import java.util.Random;
 import java.util.Scanner;
 
-class TicTacToe {
+class TicTacToe5x5 {
     Random random;
     Scanner scanner;
     char[][] table;
 
     public static void main(String[] args){
-        new TicTacToe().game();
+        new TicTacToe5x5().game();
     }
 
-    TicTacToe() {
+    TicTacToe5x5() {
         random = new Random();
         scanner = new Scanner(System.in);
-        table = new char[3][3];
+        table = new char[5][5];
     }
 
     void game() {
@@ -51,16 +51,16 @@ class TicTacToe {
     }
 
     void initTable() {
-        for (int y = 0; y < 3 ; y++) {
-            for (int x = 0; x < 3 ; x++) {
+        for (int y = 0; y < 5 ; y++) {
+            for (int x = 0; x < 5 ; x++) {
                 table[x][y] = '.';
             }
         }
     }
 
     void printTable() {
-        for (int y = 0; y < 3 ; y++) {
-            for (int x = 0; x < 3 ; x++) {
+        for (int y = 0; y < 5 ; y++) {
+            for (int x = 0; x < 5 ; x++) {
                 System.out.print(table[x][y] + " ");
             }
             System.out.println();
@@ -70,7 +70,7 @@ class TicTacToe {
     void turnHuman() {
         int x, y;
         do {
-            System.out.print("Enter x y [1...3]:");
+            System.out.print("Enter x y [1...5]:");
             x = scanner.nextInt() - 1;
             y = scanner.nextInt() - 1;
         } while (!isCellValid(x, y));
@@ -80,14 +80,14 @@ class TicTacToe {
     void turnAi() {
         int x, y;
         do {
-            x = random.nextInt(3);
-            y = random.nextInt(3);
+            x = random.nextInt(5);
+            y = random.nextInt(5);
         } while (!isCellValid(x, y));
         table[x][y] = 'o';
     }
 
     boolean isCellValid(int x, int y) {
-        if (y < 0 || y > 2 || x < 0 || x > 2) {
+        if (y < 0 || y > 4 || x < 0 || x > 4) {
             return false;
         }
         return table[x][y] == '.';
@@ -120,8 +120,8 @@ class TicTacToe {
     }
 
     boolean isTableFull() {
-        for (int y = 0; y < 3; y++) {
-            for (int x = 0; x < 3; x++) {
+        for (int y = 0; y < 5; y++) {
+            for (int x = 0; x < 5; x++) {
                 if (table[x][y] == '.') {
                     return false;
                 }
