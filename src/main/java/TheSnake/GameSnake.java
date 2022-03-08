@@ -11,12 +11,6 @@ import java.awt.RenderingHints;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
-/**
- * Java. Classic Game Snake
- *
- * @author Sergey Iryupin
- * @version 0.7.7 dated Oct 26, 2021
- */
 
 public class GameSnake extends JFrame {
 
